@@ -96,7 +96,7 @@ export default function LeadBySalesAgent() {
                   <br />
                   <label className="form-label">Sort by Closing Date:</label>
                   <br />
-                  <label className="form-check-label" htmlFor="sortAsc">
+                  <label className="form-label" htmlFor="sortAsc">
                     <input
                       className="form-check-input"
                       value="asc"
@@ -107,7 +107,7 @@ export default function LeadBySalesAgent() {
                     Oldest First
                   </label>
                   <br />
-                  <label className="form-check-label" htmlFor="sortAsc">
+                  <label className="form-label" htmlFor="sortAsc">
                     <input
                       className="form-check-input"
                       value="desc"
