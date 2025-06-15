@@ -3,8 +3,23 @@ import { useState, useEffect } from "react";
 
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import useLeadContext from "../context/LeadContext";
+import useSalesAgentContext from "../context/SalesAgentContext";
 
 export default function LeadBySalesAgent() {
+  const { salesAgent } = useParams();
+  const { name } = useParams();
+
+  const { leads, getLeads } = useLeadContext();
+  const { agents } = useSalesAgentContext();
+
+  const [sortOrder, setOrder] = useState("asc");
+  const [filter, setFilter] = useState({
+    priority: "",
+    salesAgent: salesAgent,
+    status: "",
+  });
+
   return (
     <>
       <Header />
