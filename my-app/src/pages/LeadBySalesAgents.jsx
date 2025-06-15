@@ -20,6 +20,22 @@ export default function LeadBySalesAgent() {
     status: "",
   });
 
+  useEffect(() => {
+    getLeads(filter);
+  }, [filter]);
+
+  const handleSelectOption = (e) => {
+    const { name, value } = e.target;
+    setFilter((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const filteredLeads = leads.slice().sort((a, b) => {
+    const dataA = new Date(a.timeToClose);
+    const dateB = new Date(b.timeToClose);
+
+    return sortOrder === "asc" ? dataA - dateB : dateB - dataA;
+  });
+
   return (
     <>
       <Header />
@@ -33,9 +49,18 @@ export default function LeadBySalesAgent() {
           <div>
             <h3>Status: </h3>
             <div>
-              <ul>
-                <li></li>
-              </ul>
+              {filteredLeads.length >= 1 ? (
+                <ul>
+                  {" "}
+                  {filteredLeads.map((lead, index) => (
+                    <li key={index}>
+                      {lead.name} - [Sales Agent: {lead.status}]
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Not found...!</p>
+              )}
             </div>
           </div>
           <div>
@@ -44,7 +69,11 @@ export default function LeadBySalesAgent() {
               <div className="row gy-3">
                 <div className="col-md-6">
                   <label className="form-label">Status</label>
-                  <select className="form-select">
+                  <select
+                    value={filter.status}
+                    name="status"
+                    onChange={handleSelectOption}
+                    className="form-select">
                     <option value="">-- Select --</option>
                     <option value="New">New</option>
                     <option value="Contacted">Contacted</option>
@@ -54,7 +83,11 @@ export default function LeadBySalesAgent() {
                   </select>
                   <br />
                   <label>Priority:</label>
-                  <select className="form-select">
+                  <select
+                    className="form-select"
+                    name="priority"
+                    value={filter.priority}
+                    onChange={handleSelectOption}>
                     <option value="">-- Select --</option>
                     <option value="High">High</option>
                     <option value="Medium">Medium</option>
@@ -62,14 +95,26 @@ export default function LeadBySalesAgent() {
                   </select>
                   <br />
                   <label className="form-label">Sort by Closing Date:</label>
-
-                  <input className="form-check-input" />
+                  <br />
                   <label className="form-check-label" htmlFor="sortAsc">
+                    <input
+                      className="form-check-input"
+                      value="asc"
+                      type="radio"
+                      checked={sortOrder === "asc"}
+                      onChange={(e) => setSortOrder(e.target.value)}
+                    />
                     Oldest First
                   </label>
-
-                  <input className="form-check-input" />
+                  <br />
                   <label className="form-check-label" htmlFor="sortAsc">
+                    <input
+                      className="form-check-input"
+                      value="desc"
+                      type="radio"
+                      checked={sortOrder === "desc"}
+                      onChange={(e) => setSortOrder(e.target.value)}
+                    />
                     Newest First
                   </label>
                 </div>
