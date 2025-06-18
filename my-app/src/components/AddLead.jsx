@@ -2,7 +2,7 @@ import axios from "axios";
 import useLeadContext from "../context/LeadContext";
 import { useEffect, useState } from "react";
 
-export default function AddLead() {
+export default function AddLead({data}) {
   const { addLead, updateLead } = useLeadContext();
   const [agents, setAgents] = useState([]);
   const [lead, setLead] = useState({

@@ -13,7 +13,7 @@ export default function LeadBySalesAgent() {
   const { leads, getLeads } = useLeadContext();
   const { agents } = useSalesAgentContext();
 
-  const [sortOrder, setOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("asc");
   const [filter, setFilter] = useState({
     priority: "",
     salesAgent: salesAgent,
@@ -40,8 +40,9 @@ export default function LeadBySalesAgent() {
     <>
       <Header />
       <main className="container-fluid py-3">
-        <div className="d-flex flex-wrap gap-3"></div>
+        {/* <div className="d-flex flex-wrap gap-3">
         <Sidebar />
+        </div> */}
         <div className="p-4 bg-white rounded shadow">
           <h5 className="text-center text-dark fw-bold my-4">
             Lead By Sales Agent

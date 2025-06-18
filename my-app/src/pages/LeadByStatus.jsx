@@ -38,7 +38,7 @@ export default function LeadByStatus() {
       <Header />
       <main className="container-fluid p-3">
         <div className="d-flex flex-wrap gap-3">
-          <Sidebar />
+          {/* <Sidebar /> */}
           <div
             className="flex-grow-1 bg-white rounded shadow p-4"
             style={{ minWidth: "600px" }}>

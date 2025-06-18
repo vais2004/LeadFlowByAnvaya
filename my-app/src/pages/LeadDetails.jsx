@@ -14,6 +14,7 @@ export default function LeadDetails() {
   const { leads } = useLeadContext();
 
   const [displayForm, setDisplayForm] = useState(false);
+  const [readOnlyInput, setReadOnlyInput] = useState(true);
   const [commentText, setCommentText] = useState("");
 
   const { comments, getAllComments, addComment } = useCommentContext();
@@ -39,7 +40,7 @@ export default function LeadDetails() {
     <>
       <Header />
       <div className="d-flex flex-wrap gap-3 p-3 align-items-start">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div
           className="flex-grow-1 bg-white p-4 rounded shadow"
           style={{ flex: "4 600px" }}>
@@ -72,14 +73,16 @@ export default function LeadDetails() {
             )}
           </div>
 
-          {displayForm && <AddLead data={selectedLead} />}
+          {displayForm && (
+            <AddLead data={selectedLead} readOnly={readOnlyInput} />
+          )}
 
           <div className="my-4">
             <button
               className="btn text-white"
               style={{ backgroundColor: displayForm ? "red" : "lightblue" }}
               onClick={() => {
-                setDisplayForm(!displayForm), setReadOnlyInput();
+                setDisplayForm(!displayForm); setReadOnlyInput((prev) => !prev);
               }}>
               {displayForm ? "Remove Edit Form" : "Edit Lead Details"}
             </button>

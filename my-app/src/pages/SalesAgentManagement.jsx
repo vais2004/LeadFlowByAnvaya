@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import AddAgent from "../components/AddAgent";
+import useSalesAgentContext from "../context/SalesAgentContext";
 import { useState } from "react";
 
 export default function SalesAgentManagement(){
@@ -12,7 +13,7 @@ export default function SalesAgentManagement(){
       <Header />
       <main className="container-fluid">
         <div className="row">
-          <Sidebar />
+          {/* <Sidebar /> */}
 
           <div className="col">
             <div className="py-4">
@@ -28,8 +29,8 @@ export default function SalesAgentManagement(){
                   </thead>
 
                   <tbody>
-                    {agent && arguments.length > 0 ? (
-                      agent.map((agent, index) => (
+                    {agents && agents.length > 0 ? (
+                      agents.map((agent, index) => (
                         <tr key={index}>
                           <td>{agent.name}</td>
                           <td>{agent.email}</td>
@@ -46,7 +47,7 @@ export default function SalesAgentManagement(){
                 </table>
               </div>
 
-              {/* add agent form toggle */}
+              {/* add agents form toggle */}
               {agentForm && (
                 <div className="mb-3">
                   <AddAgent />
