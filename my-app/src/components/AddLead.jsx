@@ -111,7 +111,7 @@ export default function AddLead({data}) {
               className="form-control"
               type="text"
               required
-              name="agents"
+              name="salesAgent"
               onChange={handleChange}>
               <option value={""}>---Select---</option>
               {agents.map((agent) => (
