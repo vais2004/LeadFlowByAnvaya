@@ -153,36 +153,38 @@ export default function LeadManagement() {
                       value="Low"
                       onChange={(e) => setPriority(e.target.value)}
                       checked={priority === "Low"}
-                    />
+                    />{" "}
                     Low
                   </label>
                 </div>
               </div>
 
               <div className="col-md-6">
-                <label className="form-label d-block">Sort by Closing Date:</label>
-                  <br />
-                  <label className="form-label" htmlFor="sortAsc">
-                    <input
-                      className="form-input"
-                      value="asc"
-                      type="radio"
-                      checked={sortOrder === "asc"}
-                      onChange={(e) => setSortOrder(e.target.value)}
-                    />
-                    Oldest First
-                  </label>
-                  <br />
-                  <label className="form-label" htmlFor="sortAsc">
-                    <input
-                      className="form-input"
-                      value="desc"
-                      type="radio"
-                      checked={sortOrder === "desc"}
-                      onChange={(e) => setSortOrder(e.target.value)}
-                    />
-                    Newest First
-                  </label>
+                <label className="form-label d-block">
+                  Sort by Closing Date:
+                </label>
+                <br />
+                <label className="form-label" htmlFor="sortAsc">
+                  <input
+                    className="form-input"
+                    value="asc"
+                    type="radio"
+                    checked={sortOrder === "asc"}
+                    onChange={(e) => setSortOrder(e.target.value)}
+                  />{" "}
+                  Oldest First
+                </label>
+                <br />
+                <label className="form-label" htmlFor="sortAsc">
+                  <input
+                    className="form-input"
+                    value="desc"
+                    type="radio"
+                    checked={sortOrder === "desc"}
+                    onChange={(e) => setSortOrder(e.target.value)}
+                  />{" "}
+                  Newest First
+                </label>
               </div>
             </div>
 

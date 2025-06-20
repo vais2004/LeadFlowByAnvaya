@@ -96,8 +96,8 @@ export default function AddLead({data}) {
               value={lead.source}
               onChange={handleChange}
               className="form-select"
-              name="LeadSource">
-              <option value="">Select Source</option>
+              name="leadSource">
+              <option value="">---Select Source---</option>
               <option value="Website">Website</option>
               <option value="Referral">Referral</option>
               <option value="Cold Call">Cold Call</option>
@@ -127,7 +127,7 @@ export default function AddLead({data}) {
               onChange={handleChange}
               className="form-select"
               name="leadStatus">
-              <option value="">Select Status</option>
+              <option value="">---Select Status---</option>
               <option value="New">New</option>
               <option value="Contacted">Contacted</option>
               <option value="Qualified">Qualified</option>
