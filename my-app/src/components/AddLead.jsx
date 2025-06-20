@@ -115,7 +115,7 @@ export default function AddLead({data}) {
               onChange={handleChange}>
               <option value={""}>---Select---</option>
               {agents.map((agent) => (
-                <option value={agent.id}>{agent.name}</option>
+                <option key={agent._id} value={agent.id}>{agent.name}</option>
               ))}
             </select>
             <br />
@@ -141,6 +141,7 @@ export default function AddLead({data}) {
             <label htmlFor="highValue">
               <input
                 type="checkbox"
+                name='tags'
                 value="High Value"
                 id="highValue"
                 checked={lead.tags.includes("High Value")}
@@ -152,6 +153,7 @@ export default function AddLead({data}) {
             <label htmlFor="followUp">
               <input
                 type="checkbox"
+                name='tags'
                 value="Follow-Up"
                 id="followUp"
                 checked={lead.tags.includes("Follow-Up")}
@@ -163,6 +165,7 @@ export default function AddLead({data}) {
             <label htmlFor="hotLead">
               <input
                 type="checkbox"
+                name='tags'
                 value="Hot Lead"
                 id="hotLead"
                 checked={lead.tags.includes("Hot Lead")}
@@ -174,6 +177,7 @@ export default function AddLead({data}) {
             <label htmlFor="interested">
               <input
                 type="checkbox"
+                name='tags'
                 value="Interested"
                 id="interested"
                 checked={lead.tags.includes("Interested")}
@@ -185,6 +189,7 @@ export default function AddLead({data}) {
             <label htmlFor="notInterested">
               <input
                 type="checkbox"
+                name='tags'
                 value="Not Interested"
                 id="notInterested"
                 checked={lead.tags.includes("Not Interested")}
