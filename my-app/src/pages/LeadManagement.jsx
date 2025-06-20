@@ -46,7 +46,7 @@ export default function LeadManagement() {
         <div className="d-flex flex-wrap gap-3 p-3 align-items-start">
           {/* <Sidebar /> */}
           <div
-            className="flex-grow-1 bg-white p-4 rounded shadow"
+            className="flex-grow-1 bg-white p-4 rounded "
             style={{ flex: "4 600px" }}>
             <h1 className="mb-4 fs-1">Lead List</h1>
             <hr />
@@ -87,7 +87,8 @@ export default function LeadManagement() {
                 <select
                   value={filter.status}
                   onChange={handleSelectOption}
-                  className="form-select">
+                  className="form-select"
+                  name="status">
                   <option value="">-- Select --</option>
                   <option value="New">New</option>
                   <option value="Contacted">Contacted</option>
@@ -101,7 +102,8 @@ export default function LeadManagement() {
                 <select
                   className="form-select"
                   value={filter.salesAgent}
-                  onChange={handleSelectOption}>
+                  onChange={handleSelectOption}
+                  name="salesAgent">
                   <option value="">-- Select --</option>
                   {agents.map((agent) => (
                     <option key={agent.id} value={agent.id}>

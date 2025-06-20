@@ -11,7 +11,7 @@ export default function AddLead({data}) {
     salesAgent: "",
     status: "",
     tags: [],
-    timeToClose: 0,
+    timeToClose: "",
     priority: "",
   });
 
@@ -23,7 +23,7 @@ export default function AddLead({data}) {
         salesAgent: data.salesAgent?.id || "",
         status: data.status || "",
         tags: data.tags || [],
-        timeToClose: data.timeToClose || 0,
+        timeToClose: data.timeToClose || "",
         priority: data.priority || "",
       });
     }
@@ -39,10 +39,13 @@ export default function AddLead({data}) {
     fetachAgents();
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setLead((prev) => ({ ...prev, [name]: value }));
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setLead((prev) => ({
+    ...prev,
+    [name]: name === "timeToClose" ? (value === "" ? "" : Number(value)) : value,
+  }));
+};
 
   const handleTagChange = (e) => {
     const { value, checked } = e.target;
@@ -60,15 +63,17 @@ export default function AddLead({data}) {
     e.preventDefault();
     if (data) {
       updateLead(lead, data.id);
+      
     } else {
       addLead(lead);
+      
       setLead({
         name: "",
         source: "",
         salesAgent: "",
         status: "",
         tags: [],
-        timeToClose: 0,
+        timeToClose: "",
         priority: "",
       });
     }
@@ -115,7 +120,7 @@ export default function AddLead({data}) {
               onChange={handleChange}>
               <option value={""}>---Select---</option>
               {agents.map((agent) => (
-                <option key={agent._id} value={agent.id}>{agent.name}</option>
+                <option key={agent._id} value={agent._id}>{agent.name}</option>
               ))}
             </select>
             <br />
