@@ -15,29 +15,50 @@ export function LeadProvider({ children }) {
     getLeads();
   }, []);
 
+  // async function getLeads(filter = {}) {
+  //   try {
+  //     setLoading(true);
+
+  //     const queryParams = new URLSearchParams();
+  //     if (filter.salesAgent)
+  //       queryParams.append("salesAgent", filter.salesAgent);
+  //     if (filter.status) queryParams.append("status", filter.status);
+  //     if (filter.priority) queryParams.append("priority", filter.priority);
+
+  //     const response = await axios.get(
+  //       `https://lead-flow-by-anvaya-backend.vercel.app/leads${
+  //         queryParams.toString() ? `?${queryParams.toString()}` : ""
+  //       }`
+  //     );
+
+  //     setLeads(response.data);
+  //   } catch (error) {
+  //     console.error("Error fetching leads:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
+
   async function getLeads(filter = {}) {
-    try {
-      setLoading(true);
+  try {
+    const queryParams = new URLSearchParams();
+    if (filter.salesAgent) queryParams.append("salesAgent", filter.salesAgent);
+    if (filter.status) queryParams.append("status", filter.status);
+    if (filter.priority) queryParams.append("priority", filter.priority);
 
-      const queryParams = new URLSearchParams();
-      if (filter.salesAgent)
-        queryParams.append("salesAgent", filter.salesAgent);
-      if (filter.status) queryParams.append("status", filter.status);
-      if (filter.priority) queryParams.append("priority", filter.priority);
+    const url = `https://lead-flow-by-anvaya-backend.vercel.app/leads${
+      queryParams.toString() ? `?${queryParams.toString()}` : ""
+    }`;
 
-      const response = await axios.get(
-        `https://lead-flow-by-anvaya-backend.vercel.app/leads${
-          queryParams.toString() ? `?${queryParams.toString()}` : ""
-        }`
-      );
-
-      setLeads(response.data);
-    } catch (error) {
-      console.error("Error fetching leads:", error);
-    } finally {
-      setLoading(false);
-    }
+    console.log("Fetching leads from:", url); // ✅ Debug here
+    const response = await axios.get(url);
+    setLeads(response.data);
+  } catch (error) {
+    console.error("Error fetching leads:", error);
+  } finally {
+    setLoading(false);
   }
+}
 
   async function addLead(newLead) {
     try {
