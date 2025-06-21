@@ -9,8 +9,8 @@ export default function AddForm() {
       <div style={{fontFamily:'cursive'}} className="my-4">
         {displayForm && <AddLead />}
         <button
-          className={`btn text-white fs-5 ${
-            displayForm ? "btn-danger" : "btn-info"
+          className={`btn fs-5 ${
+            displayForm ? "btn-outline-danger" : "btn-outline-info"
           }`}
           onClick={() => setDisplayForm(!displayForm)}>
           {displayForm ? "Remove Add Form" : "Add New Lead"}
