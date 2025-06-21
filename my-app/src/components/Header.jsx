@@ -22,7 +22,7 @@ const Header = () => {
     <header className="container">
       <nav className="navbar navbar-expand-lg bg-light py-3">
         <div className="container-fluid">
-          <Link className="navbar-brand fw-bold fs-2" to="/">
+          <Link className="navbar-brand fw-bold fs-1" to="/">
             Anvaya
           </Link>
           <div className="collapse navbar-collapse">

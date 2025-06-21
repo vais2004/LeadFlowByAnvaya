@@ -19,12 +19,13 @@ function App() {
   return (
     <>
       <Header />
+      <div className="col-md-3 bg-light ">
+             <Sidebar /> 
+          </div>
 
       <main className="container-fluid px-5">
         <div className="row px-5">
-          {/* <div className="col-md-3 bg-light ">
-            {/* <Sidebar /> 
-          </div> */}
+          
           <div className="col-md-9 py-5 px-4">
             <h2 className="mb-3">Dashboard</h2>
             <hr />
@@ -37,7 +38,7 @@ function App() {
                     <div className="border rounded p-2 bg-light" key={index}>
                       [
                       <Link
-                        to={`/lead/details/${lead.id}`}
+                        to={`/lead/details/${lead._id}`}
                         className="text-decoration-none">
                         {lead.name}
                       </Link>

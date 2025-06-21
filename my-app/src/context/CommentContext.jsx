@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import { createContext, useContext, useState } from "react";
 
 const CommentContext = createContext();
@@ -8,7 +7,7 @@ const useCommentContext = () => useContext(CommentContext);
 export default useCommentContext;
 
 export function CommentProvider({ children }) {
-  const [comment, setComment] = useState([]);
+  const [comments, setComments] = useState([]);
 
   async function getAllComments(leadId) {
     try {
@@ -17,7 +16,7 @@ export function CommentProvider({ children }) {
       );
 
       if (response) {
-        setComment(response.data);
+        setComments(response.data);
       }
     } catch (error) {
       console.log("Error while fetching comments:", error);
@@ -32,7 +31,7 @@ export function CommentProvider({ children }) {
       );
 
       if (response) {
-        setComment((prevComments) => [...prevComments, response.data]);
+        setComments((prevComments) => [...prevComments, response.data]);
       }
     } catch (error) {
       console.log("Error while posting comment:", error);
@@ -40,7 +39,7 @@ export function CommentProvider({ children }) {
   }
 
   return (
-    <CommentContext.Provider value={{ comment, getAllComments, addComment }}>
+    <CommentContext.Provider value={{ comments, getAllComments, addComment }}>
       {children}
     </CommentContext.Provider>
   );
