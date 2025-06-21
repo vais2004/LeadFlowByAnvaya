@@ -22,7 +22,7 @@ export default function AddAgent() {
 
   return (
     <>
-      <form className="my-3" onSubmit={handleAgentSubmitBtn}>
+      <form style={{fontFamily:'cursive'}} className="my-3" onSubmit={handleAgentSubmitBtn}>
         <div className="row g-3">
           <div className="col-md-6">
             <label className="form-label">Name:</label>
@@ -47,7 +47,7 @@ export default function AddAgent() {
               name="email"
             />
           </div>
-          <button type="submit" className="btn btn-dark">Submit</button>
+          <button type="submit" className="btn btn-outline-primary">Submit</button>
         </div>
       </form>
     </>

@@ -2,7 +2,7 @@ import axios from "axios";
 import useLeadContext from "../context/LeadContext";
 import { useEffect, useState } from "react";
 
-export default function AddLead({data}) {
+export default function AddLead({ data }) {
   const { addLead, updateLead } = useLeadContext();
   const [agents, setAgents] = useState([]);
   const [lead, setLead] = useState({
@@ -20,7 +20,7 @@ export default function AddLead({data}) {
       setLead({
         name: data.name || "",
         source: data.source || "",
-        salesAgent: data.salesAgent?.id || "",
+        salesAgent: data.salesAgent?._id || "",
         status: data.status || "",
         tags: data.tags || [],
         timeToClose: data.timeToClose || "",
@@ -39,13 +39,14 @@ export default function AddLead({data}) {
     fetachAgents();
   }, []);
 
-const handleChange = (e) => {
-  const { name, value } = e.target;
-  setLead((prev) => ({
-    ...prev,
-    [name]: name === "timeToClose" ? (value === "" ? "" : Number(value)) : value,
-  }));
-};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLead((prev) => ({
+      ...prev,
+      [name]:
+        name === "timeToClose" ? (value === "" ? "" : Number(value)) : value,
+    }));
+  };
 
   const handleTagChange = (e) => {
     const { value, checked } = e.target;
@@ -62,11 +63,11 @@ const handleChange = (e) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (data) {
-      updateLead(lead, data.id);
-      
+      updateLead(lead, data._id);
+      window.location.reload();
     } else {
       addLead(lead);
-      
+
       setLead({
         name: "",
         source: "",
@@ -80,7 +81,7 @@ const handleChange = (e) => {
   };
 
   return (
-    <main className="container py-3">
+    <main style={{ fontFamily: "cursive" }} className="container-fluid py-3">
       <h3>Add New Lead</h3>
       <form className="my-4" onSubmit={handleSubmit}>
         <div className="row g-3">
@@ -120,7 +121,9 @@ const handleChange = (e) => {
               onChange={handleChange}>
               <option value={""}>---Select---</option>
               {agents.map((agent) => (
-                <option key={agent._id} value={agent._id}>{agent.name}</option>
+                <option key={agent._id} value={agent._id}>
+                  {agent.name}
+                </option>
               ))}
             </select>
             <br />
@@ -146,7 +149,7 @@ const handleChange = (e) => {
             <label htmlFor="highValue">
               <input
                 type="checkbox"
-                name='tags'
+                name="tags"
                 value="High Value"
                 id="highValue"
                 checked={lead.tags.includes("High Value")}
@@ -158,7 +161,7 @@ const handleChange = (e) => {
             <label htmlFor="followUp">
               <input
                 type="checkbox"
-                name='tags'
+                name="tags"
                 value="Follow-Up"
                 id="followUp"
                 checked={lead.tags.includes("Follow-Up")}
@@ -170,7 +173,7 @@ const handleChange = (e) => {
             <label htmlFor="hotLead">
               <input
                 type="checkbox"
-                name='tags'
+                name="tags"
                 value="Hot Lead"
                 id="hotLead"
                 checked={lead.tags.includes("Hot Lead")}
@@ -182,7 +185,7 @@ const handleChange = (e) => {
             <label htmlFor="interested">
               <input
                 type="checkbox"
-                name='tags'
+                name="tags"
                 value="Interested"
                 id="interested"
                 checked={lead.tags.includes("Interested")}
@@ -194,7 +197,7 @@ const handleChange = (e) => {
             <label htmlFor="notInterested">
               <input
                 type="checkbox"
-                name='tags'
+                name="tags"
                 value="Not Interested"
                 id="notInterested"
                 checked={lead.tags.includes("Not Interested")}
@@ -233,7 +236,7 @@ const handleChange = (e) => {
 
             <br />
 
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="col-2 btn btn-outline-primary">
               Add Lead
             </button>
           </div>

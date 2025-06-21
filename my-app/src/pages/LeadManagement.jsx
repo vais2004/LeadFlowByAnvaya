@@ -42,14 +42,14 @@ export default function LeadManagement() {
   return (
     <>
       <Header />
-      <main>
-        <div className="d-flex flex-wrap gap-3">
-          <Sidebar />
-        </div>
+      <div className="d-flex flex-wrap">
+        <Sidebar />
+      </div>
+      <main style={{ fontFamily: "cursive" }} className="container-fluid">
         <div
           className="flex-grow-1 bg-white p-4 rounded "
           style={{ flex: "4 600px" }}>
-          <h1 className="mb-4 fs-1">Lead List</h1>
+          <h1 className="mb-4 fs-1">Lead Management</h1>
           <hr />
 
           <div className="mb-4">
@@ -67,10 +67,10 @@ export default function LeadManagement() {
                   -
                   <span>
                     [
-                    <NavLink to={`/lead/salesAgent/${lead.salesAgent._id}/${lead.salesAgent.name}`}>
-  {lead.salesAgent.name}
-</NavLink>
-
+                    <NavLink
+                      to={`/lead/sales-agent/${lead.salesAgent._id}/${lead.salesAgent.name}`}>
+                      {lead.salesAgent.name}
+                    </NavLink>
                     ]
                   </span>
                 </p>
@@ -107,7 +107,7 @@ export default function LeadManagement() {
                 name="salesAgent">
                 <option value="">-- Select --</option>
                 {agents.map((agent) => (
-                  <option key={agent.id} value={agent.id}>
+                  <option key={agent._id} value={agent._id}>
                     {agent.name}
                   </option>
                 ))}
@@ -198,3 +198,5 @@ export default function LeadManagement() {
     </>
   );
 }
+
+

@@ -20,12 +20,11 @@ function App() {
     <>
       <Header />
       <div className="col-md-3 bg-light ">
-             <Sidebar /> 
-          </div>
+        <Sidebar />
+      </div>
 
-      <main className="container-fluid px-5">
+      <main style={{fontFamily:'cursive'}} className="container-fluid px-5">
         <div className="row px-5">
-          
           <div className="col-md-9 py-5 px-4">
             <h2 className="mb-3">Dashboard</h2>
             <hr />

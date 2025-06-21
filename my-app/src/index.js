@@ -43,7 +43,7 @@ const router = createBrowserRouter([
     element: <LeadByStatus />,
   },
   {
-    path: "/lead/salesAgent/:salesAgent/:name",
+    path: "/lead/sales-agent/:salesAgent/:name",
     element: <LeadBySalesAgent />,
   },
   {

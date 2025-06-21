@@ -10,12 +10,11 @@ export default function SalesAgentManagement() {
 
   return (
     <>
-      <Header />
-
-      <div className="d-flex flex-wrap ">
+       <Header />
+      <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main className="container-fluid">
+      <main style={{fontFamily:'cursive'}} className="container-fluid">
         <div className="col">
           <div className="py-4">
             <h2>Sales Agent Management</h2>
@@ -56,7 +55,7 @@ export default function SalesAgentManagement() {
             )}
             <div className="text-end">
               <button
-                className={`btn ${agentForm ? "btn-danger" : "btn-primary"}`}
+                className={`btn ${agentForm ? "btn-outline-danger" : "btn-outline-primary"}`}
                 onClick={() => setAgentForm(!agentForm)}>
                 {agentForm ? "Remove add Form" : "Add New Agent"}
               </button>
