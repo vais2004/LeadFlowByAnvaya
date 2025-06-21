@@ -228,7 +228,7 @@ export default function LeadManagement() {
   };
 
   useEffect(() => {
-    console.log("Calling getLeads with filter:", filter);
+   // console.log("Calling getLeads with filter:", filter);
     getLeads(filter);
   }, [filter]);
 

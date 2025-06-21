@@ -50,7 +50,7 @@ export function LeadProvider({ children }) {
       queryParams.toString() ? `?${queryParams.toString()}` : ""
     }`;
 
-    console.log("Fetching leads from:", url); // ✅ Debug here
+    //console.log("Fetching leads from:", url); // 
     const response = await axios.get(url);
     setLeads(response.data);
   } catch (error) {
