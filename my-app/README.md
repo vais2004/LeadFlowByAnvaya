@@ -89,12 +89,9 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 
 ### • Reports Page
 #### Shows lead performance visually using charts:
--📊 Report 1: Total Leads Closed & In Pipeline
-Pie Chart view
--📊 Report 2: Leads Closed by Sales Agent (Last 7 Days)
-Bar Chart view
--📊 Report 3: Lead Status Distribution
-Bar Chart showing how many leads are in each status
+- 📊 Report 1: Total Leads Closed & In Pipeline Pie Chart view
+- 📊 Report 2: Leads Closed by Sales Agent (Last 7 Days) Bar Chart view
+- 📊 Report 3: Lead Status Distribution Bar Chart showing how many leads are in each status
 
 
 ## 🎨 Frontend
