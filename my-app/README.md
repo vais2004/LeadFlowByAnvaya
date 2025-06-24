@@ -99,7 +99,6 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 **Core Technologies**
 - React.js – Component-based UI development
 - React Redux – State management
-- Redux Toolkit – Simplified Redux logic and async actions
 - React Router DOM – Routing and navigation
 - Axios – API communication and data fetching
 
