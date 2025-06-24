@@ -2,6 +2,9 @@ import axios from "axios";
 import useLeadContext from "../context/LeadContext";
 import { useEffect, useState } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function AddLead({ data }) {
   const { addLead, updateLead } = useLeadContext();
   const [agents, setAgents] = useState([]);
@@ -64,10 +67,11 @@ export default function AddLead({ data }) {
     e.preventDefault();
     if (data) {
       updateLead(lead, data._id);
+      toast.success("Lead updated successfully!");
       window.location.reload();
     } else {
       addLead(lead);
-
+      toast.success("New lead added successfully!");
       setLead({
         name: "",
         source: "",
@@ -82,6 +86,7 @@ export default function AddLead({ data }) {
 
   return (
     <main style={{ fontFamily: "cursive" }} className="container-fluid py-3">
+      <ToastContainer position="top-right" autoClose={3000} />
       <h3>Add New Lead</h3>
       <form className="my-4" onSubmit={handleSubmit}>
         <div className="row g-3">
