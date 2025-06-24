@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Anavaya App
+It's built using **HTML**, **CSS**, and **JavaScript**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### Hosted Link: (https://lead-flow-by-anvaya.vercel.app/)
+ 
+##### Backend code URL: (https://github.com/vais2004/LeadFlowByAnvaya-backend)
 
-## Available Scripts
+##### Frontend code URL: (https://github.com/vais2004/LeadFlowByAnvaya)
 
-In the project directory, you can run:
 
-### `npm start`
+## ✨ Pages:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dashboard (Home Page)
+--> Lead List:
+      - Lead according to status
+--> Each lead displays: 
+      - Lead Name
+--> Clicking a lead opens its Lead Details page
+--> Quick Filters
+      - Show number of leads by status
+      - Clicking a status filters the list accordingly
+--> Add New Lead Button
+      - Clicking opens a form with the following fields:
+          • Lead Name (text)
+          • Lead Source (dropdown)
+          • Assigned Sales Agent (dropdown)
+          • Lead Status (dropdown)
+          • Tags (checkboxes — multiple selections allowed)
+          • Time to Close (number input)
+          • Priority (dropdown)
+          • Add Lead button
+          
+--> Clears form after submission
+--> Remove Add Form button hides the form
+          
+### Lead Details Page
+--> Displays:
+    - Lead Name
+    - Sales Agent Name
+    - Lead Source
+    - Status
+    - Priority
+    - Time to Close
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+--> Edit Lead Details Button
+    - Opens a form similar to Add Lead Form
+    - After editing, clicking Add Lead updates the lead info
+    - Remove Edit Form button hides the form.
 
-### `npm test`
+--> Comment Section
+    - Shows existing comments with:
+       • Commenter's name
+       • Date & Time
+       • Comment text
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--> Input field to post a new comment.
 
-### `npm run build`
+### Lead Management Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--> Shows list of all leads with:
+     - Lead Name
+     - Status
+     - Assigned Agent
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+--> Includes Filters:
+     - Filter by Status
+     - Filter by Sales Agent
+     - Sort by Closing Date
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+--> Clear All Filters button to reset all filters
+--> Add New Lead button opens the add form
 
-### `npm run eject`
+### Leads by Status Page
+####Opens when a status is clicked in the Lead Management Page
+--> Shows all leads with the selected status.
+--> Each lead shows:
+      - Lead Name
+      - Sales Agent Name
+--> Filters at the bottom:
+      - Filter by Priority
+      - Filter by Agent
+      - Sort by Closing Date
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###Sales Agents Page
+--> Sales Agents Management Page
+--> Table shows:
+      - Agent Name
+      - Email
+      
+--> Add New Agent Button
+--> Opens a form with
+      - Name (input)
+      - Email (input)
+      - Submit button
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+--> Remove Add Form button hides the form
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+###  7. Reports Page
+#### Shows lead performance visually using charts:
+-->📊 Report 1: Total Leads Closed & In Pipeline
+Pie Chart view
+-->📊 Report 2: Leads Closed by Sales Agent (Last 7 Days)
+Bar Chart view
+-->📊 Report 3: Lead Status Distribution
+Bar Chart showing how many leads are in each status
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Frontend
 
-### Analyzing the Bundle Size
+**Core Technologies**
+- React.js – Component-based UI development
+- React Redux – State management
+- Redux Toolkit – Simplified Redux logic and async actions
+- Redux Persist – State in localStorage (like login info, cart)
+- React Router DOM – Routing and navigation
+- Axios – API communication and data fetching
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Styling & UI**
+- Bootstrap 5 – Responsive design framework for consistent UI components
+- Inline Styling – Quick, component-level styling using JSX
+- React Toastify (Notifications)
+---
 
-### Making a Progressive Web App
+## 🛠️ Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Server Technologies**
+- Node.js
+- Express.js
+- Mongoose (MongoDB)
+- CORS (Cross-Origin Resource Sharing)
 
-### Advanced Configuration
+**Database**
+- MongoDB
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📸 Demo Images:
