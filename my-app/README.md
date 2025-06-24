@@ -124,3 +124,34 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 - MongoDB
 
 ## 📸 Demo Images:
+### DASHBOARD
+![Screenshot 2025-06-21 164437](https://github.com/user-attachments/assets/dd2b44da-534d-4b4b-96ce-f4fafa552aec)
+
+![Screenshot 2025-06-21 164450](https://github.com/user-attachments/assets/b3a44e7c-6fd9-468c-b7c3-10deca3aac14)
+
+![Screenshot 2025-06-21 164458](https://github.com/user-attachments/assets/3644dd3b-a524-4c48-b810-936ffa9d0ebd)
+
+### LEAD MANAGEMENT
+![Screenshot 2025-06-21 164508](https://github.com/user-attachments/assets/653a362b-bfcc-453f-b455-ee88a084ead9)
+
+![Screenshot 2025-06-21 164515](https://github.com/user-attachments/assets/5a64aa0c-be86-47d2-bac3-db34b770e6a1)
+
+### LEAD BY STATUS
+![Screenshot 2025-06-21 164526](https://github.com/user-attachments/assets/a210eb3d-d0b3-431e-bb01-d4d92b8d7581)
+
+
+### LEAD BY SALES AGENT 
+![Screenshot 2025-06-21 164537](https://github.com/user-attachments/assets/ff15f93b-eb8e-4064-b1ef-876047b1720c)
+
+### SALES AGENT MANAGEMENT
+![Screenshot 2025-06-21 164549](https://github.com/user-attachments/assets/b466eb3e-c8b2-4a89-a7d9-183ec2386400)
+
+### REPORT
+![Screenshot 2025-06-21 164602](https://github.com/user-attachments/assets/72caf322-415c-490c-b89c-674eba1591d8)
+
+![Screenshot 2025-06-21 164613](https://github.com/user-attachments/assets/43c7f3f9-b88d-46b2-893a-79005c162754)
+
+![Screenshot 2025-06-21 164622](https://github.com/user-attachments/assets/8aed7400-98a7-4d9b-823f-ee2f8740931f)
+
+![Screenshot 2025-06-21 164631](https://github.com/user-attachments/assets/98264d50-7572-4865-8c99-794b0a25b32a)
+
