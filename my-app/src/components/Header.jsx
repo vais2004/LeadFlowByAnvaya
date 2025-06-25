@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 const Header = () => {
   return (
     <header className="container-fluid">
-      <nav className="navbar navbar-expand-lg bg-light py-3">
+      <nav className="navbar navbar-expand-lg bg-light ">
         <div className="container-fluid">
-          <a className="navbar-brand fs-1" style={{fontFamily:'cursive'}} href="/">
-           <i>Anvaya</i>
+          <a
+            className="navbar-brand fs-1"
+            style={{ fontFamily: "cursive" }}
+            href="/">
+            <i>Anvaya</i>
           </a>
         </div>
       </nav>

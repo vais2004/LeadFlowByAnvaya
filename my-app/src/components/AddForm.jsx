@@ -9,11 +9,11 @@ export default function AddForm() {
       <div className="my-4">
         {displayForm && <AddLead />}
         <button
-          className={`btn fs-5 ${
-            displayForm ? "btn-outline-danger" : "btn-outline-info"
+          className={`btn fs-6 ${
+            displayForm ? "btn-outline-danger" : "btn-outline-primary"
           }`}
           onClick={() => setDisplayForm(!displayForm)}>
-          {displayForm ? "Remove Add Form" : "Add New Lead"}
+          {displayForm ? "Remove Add Form" : "Add New Lead +"}
         </button>
       </div>
     </>

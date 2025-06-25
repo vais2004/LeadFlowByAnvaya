@@ -62,30 +62,16 @@ export default function LeadBySalesAgent() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main className="flex-grow-1 p-4 bg-light">
+      <main
+        className="flex-grow-1 p-4 mt-5"
+        style={{ backgroundColor: "lavender" }}>
         <h2 className="mb-4">Leads by Sales Agent</h2>
         <hr />
-        <h5 className="mb-3">Sales Agent: {decodeURIComponent(name)}</h5>
-
-        <div className="mb-4">
-          {filteredLeads.length > 0 ? (
-            <ul className="list-group">
-              {filteredLeads.map((lead, index) => (
-                <li key={index} className="list-group-item">
-                  {lead.name} - [Status: {lead.status}]
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No leads found for this agent.</p>
-          )}
-        </div>
-
         {/* Filter and Sort Section */}
         <div className="mb-4">
           <h5 className="fw-">Filter</h5>
           <div className="row gy-3">
-            <div className="col-md-6">
+            <div className="col-md-4">
               <label className="form-label">Status</label>
               <select
                 className="form-select"
@@ -99,8 +85,9 @@ export default function LeadBySalesAgent() {
                 <option value="Proposal Sent">Proposal Sent</option>
                 <option value="Closed">Closed</option>
               </select>
+            </div>
 
-              <br />
+            <div className="col-md-4">
               <label className="form-label">Priority</label>
               <select
                 className="form-select"
@@ -112,8 +99,9 @@ export default function LeadBySalesAgent() {
                 <option value="Medium">Medium</option>
                 <option value="Low">Low</option>
               </select>
+            </div>
 
-              <br />
+            <div className="col-md-4">
               <label className="form-label">Sort by Closing Date</label>
               <div>
                 <label className="me-3">
@@ -141,6 +129,21 @@ export default function LeadBySalesAgent() {
               </div>
             </div>
           </div>
+        </div>
+        <h5 className="mb-3">Sales Agent: {decodeURIComponent(name)}</h5>
+
+        <div className="mb-4">
+          {filteredLeads.length > 0 ? (
+            <ul className="list-group">
+              {filteredLeads.map((lead, index) => (
+                <li key={index} className="list-group-item">
+                  {lead.name} - [Status: {lead.status}]
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No leads found for this agent.</p>
+          )}
         </div>
       </main>
     </>

@@ -89,11 +89,15 @@ export default function AddLead({ data }) {
   };
 
   return (
-    <main className="container-fluid py-3">
+    <main className="container-fluid py-3 px-5">
       <ToastContainer position="top-right" autoClose={3000} />
       <h3>{data ? "Edit Lead" : "Add New Lead"}</h3>
+      <hr />
 
-      <form className="my-4" onSubmit={handleSubmit}>
+      <form
+        className="my-4 px-4 py-3"
+        onSubmit={handleSubmit}
+        style={{ backgroundColor: "lavender" }}>
         <div className="row g-3">
           <div>
             <label className="form-label">Lead Name:</label>

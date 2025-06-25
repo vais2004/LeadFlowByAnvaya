@@ -22,6 +22,7 @@ export function LeadProvider({ children }) {
         queryParams.append("salesAgent", filter.salesAgent);
       if (filter.status) queryParams.append("status", filter.status);
       if (filter.priority) queryParams.append("priority", filter.priority);
+      if (filter.source) queryParams.append("source", filter.source);
 
       const url = `https://lead-flow-by-anvaya-backend.vercel.app/leads${
         queryParams.toString() ? `?${queryParams.toString()}` : ""
@@ -53,7 +54,7 @@ export function LeadProvider({ children }) {
 
   async function updateLead(updatedLead, id) {
     try {
-       const response = await axios.put(
+      const response = await axios.put(
         `https://lead-flow-by-anvaya-backend.vercel.app/leads/${id}`,
         updatedLead
       );
