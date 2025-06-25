@@ -8,7 +8,7 @@ import AddLead from "./components/AddLead";
 import SalesAgentManagement from "./pages/SalesAgentManagement";
 import LeadDetails from "./pages/LeadDetails";
 import Reports from "./pages/Report";
-import LeadByStatus from "./pages/LeadByStatus";
+//import LeadByStatus from "./pages/LeadByStatus";
 import LeadManagement from "./pages/LeadManagement";
 import LeadBySalesAgent from "./pages/LeadBySalesAgents";
 
@@ -38,10 +38,10 @@ const router = createBrowserRouter([
     path: "/lead/details/:leadId",
     element: <LeadDetails />,
   },
-  {
-    path: "/lead/status/:status",
-    element: <LeadByStatus />,
-  },
+  // {
+  //   path: "/lead/status/:status",
+  //   element: <LeadByStatus />,
+  // },
   {
     path: "/lead/sales-agent/:salesAgent/:name",
     element: <LeadBySalesAgent />,

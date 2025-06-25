@@ -67,7 +67,7 @@ export default function LeadBySalesAgent() {
         style={{ backgroundColor: "lavender" }}>
         <h2 className="mb-4">Leads by Sales Agent</h2>
         <hr />
-        {/* Filter and Sort Section */}
+        {/* filter and sort section */}
         <div className="mb-4">
           <h5 className="fw-">Filter</h5>
           <div className="row gy-3">

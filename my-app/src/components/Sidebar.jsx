@@ -8,26 +8,26 @@ export default function Sidebar() {
       <ul className="list-unstyled d-flex  flex-wrap list-unstyled">
         <li className="d-flex mx-3 fs-5 ">
           <Link className="text-decoration-none text-dark ms-5" to="/">
-            <i class="bi bi-clipboard2-data"> Dashboard</i>
+            <i className="bi bi-clipboard2-data"> Dashboard</i>
           </Link>
         </li>
         <li className="d-flex mx-3 fs-5 ">
           <Link
             className="text-decoration-none text-dark"
             to="/lead/management">
-            <i class="bi bi-handbag"> Leads</i>
+            <i className="bi bi-handbag"> Leads</i>
           </Link>
         </li>
         <li className="d-flex mx-3 fs-5 ">
           <Link
             className="text-decoration-none text-dark"
             to="/agent/management">
-            <i class="bi bi-person"> Agents</i>
+            <i className="bi bi-person"> Agents</i>
           </Link>
         </li>
         <li className="d-flex mx-3 fs-5 ">
           <Link className="text-decoration-none text-dark" to="/reports">
-            <i class="bi bi-pie-chart"> Reports</i>
+            <i className="bi bi-pie-chart"> Reports</i>
           </Link>
         </li>
       </ul>

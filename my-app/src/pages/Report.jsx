@@ -16,8 +16,6 @@ import {
 } from "recharts";
 import axios from "axios";
 
-//const COLORS = ["#00C49F", "#FFBB28", "#FF8042", "#0088FE", "#FF4444"];
-//const COLORS = ["#00C49F", "#FFBB28"];
 const COLORS = ["#ffc9bb", "#87cefa"];
 
 export default function Reports() {
@@ -74,7 +72,7 @@ export default function Reports() {
         <div className="flex-grow-1 p-4 bg-white rounded shadow">
           <div className="fs-1 mb-4">Reports</div>
 
-          {/* Pie Chart */}
+          {/* pie chart */}
           <h5
             className="bg-secondary text-center text-white py-2 px-2"
             style={{ width: "100%" }}>
@@ -108,7 +106,7 @@ export default function Reports() {
           <br />
           <br />
 
-          {/* Bar Chart for last week closed leads */}
+          {/* barchart for last week closed leads */}
           <h5
             className="bg-secondary text-center text-white py-2 px-2"
             style={{ width: "100%" }}>
@@ -141,7 +139,7 @@ export default function Reports() {
           <br />
           <br />
 
-          {/* Status Distribution Bar Chart */}
+          {/* status distribution barchart */}
           <h5
             className="bg-secondary text-center text-white py-2 px-2"
             style={{ width: "100%" }}>

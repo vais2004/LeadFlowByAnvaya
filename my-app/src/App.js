@@ -31,7 +31,7 @@ function App() {
         <Sidebar />
       </div>
       <main className="container mt-4 px-4">
-        {/* Dashboard header and filter */}
+        {/* dashboard header and filter */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className=" mb-0">Dashboard</h2>
 
@@ -48,7 +48,7 @@ function App() {
           </select>
         </div>
 
-        {/* Summary cards */}
+        {/* summary cards */}
         <div className="row mb-4 g-3">
           {["New", "Contacted", "Qualified", "Closed"].map((status, idx) => (
             <div className="col-md-3" key={idx}>
@@ -61,12 +61,12 @@ function App() {
             </div>
           ))}
         </div>
-        {/* Add Lead Form */}
+        {/* add lead form */}
         <div className="my-3">
           <AddForm />
         </div>
 
-        {/* Recent Leads */}
+        {/* recent leads */}
         <div className="mb-4">
           <h4 className="fw-semibold mb-3">Recent Leads</h4>
           <div className="row g-3">

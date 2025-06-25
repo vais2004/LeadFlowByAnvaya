@@ -141,7 +141,7 @@ export default function LeadDetails() {
               )}
             </div>
 
-            {/* Add Comment Form */}
+            {/* add comment form */}
             <form onSubmit={handleSubmitBtn}>
               <div className="d-flex flex-wrap gap-3 align-items-baseline">
                 <input
