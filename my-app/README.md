@@ -132,6 +132,10 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 
 ![Screenshot 2025-06-25 191733](https://github.com/user-attachments/assets/7b411275-e554-4cc9-9be7-b0c7fb35a756)
 
+![Screenshot 2025-06-25 193013](https://github.com/user-attachments/assets/ec081a1a-0fcc-4aa8-b80b-b267ff5911eb)
+
+![Screenshot 2025-06-25 193046](https://github.com/user-attachments/assets/4fc1062c-97e6-47c3-bfbf-ad0e1569d3bc)
+
 ### LEAD DETAILS
 ![Screenshot 2025-06-25 191553](https://github.com/user-attachments/assets/8c28bca1-7a4e-4725-a5cf-9c671468df3b)
 
