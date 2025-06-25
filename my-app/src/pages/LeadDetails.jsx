@@ -101,7 +101,7 @@ export default function LeadDetails() {
           </div>
 
           <h1 className="mb-4 fs-3">Comments Section</h1>
-          <div className="border bg-light rounded p-4">
+          <div className="border rounded p-4" style={{backgroundColor:"lavender"}}>
             <div className="bg-light-subtle p-4 rounded mb-4">
               {Array.isArray(comments) && comments.length >= 1 ? (
                 comments.map((comment, index) => (
