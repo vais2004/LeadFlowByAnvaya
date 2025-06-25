@@ -24,12 +24,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <div className="d-flex">
-        <Sidebar />
-      </div>
+      <Header />
+
       <main className="container mt-4 px-4">
         {/* dashboard header and filter */}
         <div className="d-flex justify-content-between align-items-center mb-4">

@@ -16,7 +16,7 @@ import {
 } from "recharts";
 import axios from "axios";
 
-const COLORS = ["#ffc9bb", "#87cefa"];
+const COLORS = ["#ED2B33FF", "#D85A7FFF"];
 
 export default function Reports() {
   const [pieData, setPieData] = useState([]);
@@ -65,9 +65,7 @@ export default function Reports() {
   return (
     <>
       <Header />
-      <div className="d-flex flex-wrap">
-        <Sidebar />
-      </div>
+
       <main className="container-fluid">
         <div className="flex-grow-1 p-4 bg-white rounded shadow">
           <div className="fs-1 mb-4">Reports</div>
@@ -129,7 +127,7 @@ export default function Reports() {
                   <Legend />
                   <Bar
                     dataKey="closedLeads"
-                    fill="lavender"
+                    fill="lightgreen"
                     name="Closed Leads"
                   />
                 </BarChart>
@@ -155,7 +153,7 @@ export default function Reports() {
                 <YAxis allowDecimals={false} />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="value" fill="lightblue" name="Lead Status" />
+                <Bar dataKey="value" fill="lightpink" name="Lead Status" />
               </BarChart>
             </ResponsiveContainer>
           </div>

@@ -1,4 +1,3 @@
-
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import AddAgent from "../components/AddAgent";
@@ -13,9 +12,7 @@ export default function SalesAgentManagement() {
   return (
     <>
       <Header />
-      <div className="d-flex flex-wrap">
-        <Sidebar />
-      </div>
+
       <main className="container-fluid">
         <div className="col">
           <div className="py-4">

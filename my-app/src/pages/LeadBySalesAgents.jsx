@@ -59,9 +59,7 @@ export default function LeadBySalesAgent() {
   return (
     <>
       <Header />
-      <div className="d-flex flex-wrap">
-        <Sidebar />
-      </div>
+      
       <main
         className="flex-grow-1 p-4 mt-5"
         style={{ backgroundColor: "lavender" }}>

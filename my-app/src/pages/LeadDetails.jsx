@@ -54,17 +54,14 @@ export default function LeadDetails() {
   return (
     <>
       <Header />
-      <div className="d-flex flex-wrap">
-        <Sidebar />
-      </div>
+
       <main className="container-fluid">
         <ToastContainer position="top-right" autoClose={3000} />
         <div
           className="flex-grow-1 bg-white p-4 rounded shadow"
           style={{ flex: "4 600px" }}>
-          <div className="mb-4 fs-2">Lead Management:</div>
-          <hr />
           <h3>Lead Details:-</h3>
+          <hr />
           <div
             className="ps-4 pt-4 fs-6 pb-3 rounded"
             style={{ backgroundColor: "lavender" }}>
@@ -137,7 +134,7 @@ export default function LeadDetails() {
                   </div>
                 ))
               ) : (
-                <div>Not commented yet...!!!</div>
+                <div>No Comments yet...!!!</div>
               )}
             </div>
 

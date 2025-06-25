@@ -1,5 +1,3 @@
-
-
 import Header from "../components/Header";
 import AddForm from "../components/AddForm";
 import Sidebar from "../components/Sidebar";
@@ -45,9 +43,7 @@ export default function LeadManagement() {
   return (
     <>
       <Header />
-      <div className="d-flex">
-        <Sidebar />
-      </div>
+
       <main className="container-fluid p-4">
         <div className="bg-white rounded p-4 shadow">
           <div
