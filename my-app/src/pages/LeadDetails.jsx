@@ -45,7 +45,7 @@ export default function LeadDetails() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main style={{ fontFamily: "cursive" }} className="container-fluid">
+      <main className="container-fluid">
         <ToastContainer position="top-right" autoClose={3000} />
         <div
           className="flex-grow-1 bg-white p-4 rounded shadow"
@@ -67,6 +67,9 @@ export default function LeadDetails() {
                 </p>
                 <p>
                   <strong>Lead Status:</strong> {selectedLead.status}
+                </p>
+                <p>
+                  <strong>Tags:</strong> {selectedLead.tags.join(", ")}{" "}
                 </p>
                 <p>
                   <strong>Priority:</strong> {selectedLead.priority}

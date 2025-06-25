@@ -6,7 +6,7 @@ export default function AddForm() {
   const [displayForm, setDisplayForm] = useState(false);
   return (
     <>
-      <div style={{fontFamily:'cursive'}} className="my-4">
+      <div className="my-4">
         {displayForm && <AddLead />}
         <button
           className={`btn fs-5 ${

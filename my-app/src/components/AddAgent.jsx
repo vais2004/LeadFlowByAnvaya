@@ -19,18 +19,19 @@ export default function AddAgent() {
   const handleAgentSubmitBtn = async (e) => {
     e.preventDefault();
     addAgent(agent);
-    toast.success(`Added ("${agent.name}") new agent!`);
-    agent.name = "";
-    agent.email = "";
+    toast.success(`Added "${agent.name}" as a new agent!`);
+
+    setAgent({ name: "", email: "" });
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   };
 
   return (
     <>
-      <ToastContainer position="top-right" className="mt-5" autoClose={3000} />
-      <form
-        style={{ fontFamily: "cursive" }}
-        className="my-3"
-        onSubmit={handleAgentSubmitBtn}>
+      <ToastContainer position="top-right" className="mt-5" autoClose={2000} />
+      <form className="my-3" onSubmit={handleAgentSubmitBtn}>
         <div className="row g-3">
           <div className="col-md-6">
             <label className="form-label">Name:</label>

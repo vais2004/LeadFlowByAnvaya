@@ -70,7 +70,7 @@ export default function Reports() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main style={{fontFamily:'cursive'}} className="container-fluid">
+      <main className="container-fluid">
         <div className="flex-grow-1 p-4 bg-white rounded shadow">
           <div className="fs-1 mb-4">Reports</div>
 

@@ -1,13 +1,14 @@
 import axios from "axios";
 import useLeadContext from "../context/LeadContext";
 import { useEffect, useState } from "react";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AddLead({ data }) {
   const { addLead, updateLead } = useLeadContext();
+
   const [agents, setAgents] = useState([]);
+
   const [lead, setLead] = useState({
     name: "",
     source: "",
@@ -33,13 +34,13 @@ export default function AddLead({ data }) {
   }, [data]);
 
   useEffect(() => {
-    const fetachAgents = async () => {
+    const fetchAgents = async () => {
       const response = await axios.get(
         "https://lead-flow-by-anvaya-backend.vercel.app/agents"
       );
       setAgents(response.data);
     };
-    fetachAgents();
+    fetchAgents();
   }, []);
 
   const handleChange = (e) => {
@@ -53,7 +54,6 @@ export default function AddLead({ data }) {
 
   const handleTagChange = (e) => {
     const { value, checked } = e.target;
-
     setLead((prev) => {
       if (checked) {
         return { ...prev, tags: [...prev.tags, value] };
@@ -65,13 +65,17 @@ export default function AddLead({ data }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (data) {
-      updateLead(lead, data._id);
+      await updateLead(lead, data._id);
       toast.success("Lead updated successfully!");
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
     } else {
-      addLead(lead);
+      await addLead(lead);
       toast.success("New lead added successfully!");
+
       setLead({
         name: "",
         source: "",
@@ -85,9 +89,10 @@ export default function AddLead({ data }) {
   };
 
   return (
-    <main style={{ fontFamily: "cursive" }} className="container-fluid py-3">
+    <main className="container-fluid py-3">
       <ToastContainer position="top-right" autoClose={3000} />
-      <h3>Add New Lead</h3>
+      <h3>{data ? "Edit Lead" : "Add New Lead"}</h3>
+
       <form className="my-4" onSubmit={handleSubmit}>
         <div className="row g-3">
           <div>
@@ -107,7 +112,8 @@ export default function AddLead({ data }) {
               value={lead.source}
               onChange={handleChange}
               className="form-select"
-              name="source">
+              name="source"
+              required>
               <option value="">---Select Source---</option>
               <option value="Website">Website</option>
               <option value="Referral">Referral</option>
@@ -120,11 +126,10 @@ export default function AddLead({ data }) {
             <select
               value={lead.salesAgent}
               className="form-control"
-              type="text"
-              required
               name="salesAgent"
-              onChange={handleChange}>
-              <option value={""}>---Select---</option>
+              onChange={handleChange}
+              required>
+              <option value="">---Select---</option>
               {agents.map((agent) => (
                 <option key={agent._id} value={agent._id}>
                   {agent.name}
@@ -151,68 +156,30 @@ export default function AddLead({ data }) {
 
             <label className="form-label">Tags:</label>
             <br />
-            <label htmlFor="highValue">
-              <input
-                type="checkbox"
-                name="tags"
-                value="High Value"
-                id="highValue"
-                checked={lead.tags.includes("High Value")}
-                onChange={handleTagChange}
-              />{" "}
-              High Value
-            </label>
-            <br />
-            <label htmlFor="followUp">
-              <input
-                type="checkbox"
-                name="tags"
-                value="Follow-Up"
-                id="followUp"
-                checked={lead.tags.includes("Follow-Up")}
-                onChange={handleTagChange}
-              />{" "}
-              Follow-Up
-            </label>
-            <br />
-            <label htmlFor="hotLead">
-              <input
-                type="checkbox"
-                name="tags"
-                value="Hot Lead"
-                id="hotLead"
-                checked={lead.tags.includes("Hot Lead")}
-                onChange={handleTagChange}
-              />{" "}
-              Hot Lead
-            </label>
-            <br />
-            <label htmlFor="interested">
-              <input
-                type="checkbox"
-                name="tags"
-                value="Interested"
-                id="interested"
-                checked={lead.tags.includes("Interested")}
-                onChange={handleTagChange}
-              />{" "}
-              Interested
-            </label>
-            <br />
-            <label htmlFor="notInterested">
-              <input
-                type="checkbox"
-                name="tags"
-                value="Not Interested"
-                id="notInterested"
-                checked={lead.tags.includes("Not Interested")}
-                onChange={handleTagChange}
-              />{" "}
-              Not Interested
-            </label>
+            {[
+              "High Value",
+              "Follow-Up",
+              "Hot Lead",
+              "Interested",
+              "Not Interested",
+            ].map((tag) => (
+              <div key={tag}>
+                <label htmlFor={tag}>
+                  <input
+                    type="checkbox"
+                    name="tags"
+                    value={tag}
+                    id={tag}
+                    checked={lead.tags.includes(tag)}
+                    onChange={handleTagChange}
+                  />{" "}
+                  {tag}
+                </label>
+              </div>
+            ))}
 
             <br />
-            <br />
+
             <label>Time to Close (days)</label>
             <input
               className="form-control"
@@ -223,7 +190,6 @@ export default function AddLead({ data }) {
               value={lead.timeToClose}
               onChange={handleChange}
             />
-
             <br />
 
             <label className="form-label">Priority:</label>
@@ -242,7 +208,7 @@ export default function AddLead({ data }) {
             <br />
 
             <button type="submit" className="col-2 btn btn-outline-primary">
-              Add Lead
+              {data ? "Update" : "Add"} Lead
             </button>
           </div>
         </div>

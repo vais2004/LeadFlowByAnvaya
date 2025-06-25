@@ -62,9 +62,7 @@ export default function LeadBySalesAgent() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main
-        style={{ fontFamily: "cursive" }}
-        className="flex-grow-1 p-4 bg-light">
+      <main className="flex-grow-1 p-4 bg-light">
         <h2 className="mb-4">Leads by Sales Agent</h2>
         <hr />
         <h5 className="mb-3">Sales Agent: {decodeURIComponent(name)}</h5>

@@ -1,9 +1,8 @@
-
 import Header from "../components/Header";
 import AddForm from "../components/AddForm";
 import Sidebar from "../components/Sidebar";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import useSalesAgentContext from "../context/SalesAgentContext";
@@ -27,7 +26,7 @@ export default function LeadManagement() {
   };
 
   useEffect(() => {
-   // console.log("Calling getLeads with filter:", filter);
+    // console.log("Calling getLeads with filter:", filter);
     getLeads(filter);
   }, [filter]);
 
@@ -43,8 +42,10 @@ export default function LeadManagement() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main style={{ fontFamily: "cursive" }} className="container-fluid">
-        <div className="flex-grow-1 bg-white p-4 rounded" style={{ flex: "4 600px" }}>
+      <main className="container-fluid">
+        <div
+          className="flex-grow-1 bg-white p-4 rounded"
+          style={{ flex: "4 600px" }}>
           <h1 className="mb-4 fs-1">Lead Management</h1>
           <hr />
 
@@ -55,17 +56,23 @@ export default function LeadManagement() {
             ) : sortedLeads.length > 0 ? (
               sortedLeads.map((lead, index) => (
                 <p key={index}>
-                  <span>{lead.name}</span> -
+                  name:{" "}
                   <span>
-                    [
+                    <Link to={`/lead/details/${lead._id}`}>{lead.name}</Link>
+                  </span>{" "}
+                  |{" "}
+                  <span>
+                    {" "}
+                    status: [
                     <NavLink to={`/lead/status/${lead.status}`}>
                       {lead.status}
                     </NavLink>
                     ]
-                  </span>
-                  -
+                  </span>{" "}
+                  |{" "}
                   <span>
-                    [
+                    {" "}
+                    agent: [
                     <NavLink
                       to={`/lead/sales-agent/${lead.salesAgent._id}/${lead.salesAgent.name}`}>
                       {lead.salesAgent.name}
@@ -159,7 +166,9 @@ export default function LeadManagement() {
           {/* Sort Section */}
           <div className="row g-3 mb-4">
             <div className="col-md-6">
-              <label className="form-label d-block">Sort by Closing Date:</label>
+              <label className="form-label d-block">
+                Sort by Closing Date:
+              </label>
               <label className="form-label" htmlFor="sortAsc">
                 <input
                   className="form-input me-2"
@@ -208,4 +217,3 @@ export default function LeadManagement() {
     </>
   );
 }
-

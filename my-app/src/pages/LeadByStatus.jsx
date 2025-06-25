@@ -61,7 +61,7 @@ export default function LeadByStatus() {
       <div className="d-flex flex-wrap">
         <Sidebar />
       </div>
-      <main style={{ fontFamily: "cursive" }} className="container-fluid p-3">
+      <main className="container-fluid p-3">
         <div
           className="flex-grow-1 mt-4 bg-light p-4"
           style={{ minWidth: "600px" }}>

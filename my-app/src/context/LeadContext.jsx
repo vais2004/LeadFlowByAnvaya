@@ -53,17 +53,27 @@ export function LeadProvider({ children }) {
 
   async function updateLead(updatedLead, id) {
     try {
-      const response = await axios.put(
+       const response = await axios.put(
         `https://lead-flow-by-anvaya-backend.vercel.app/leads/${id}`,
         updatedLead
       );
-      if (response) {
-        setLeads((prevLeads) =>
-          prevLeads.map((lead) =>
-            lead._id === id ? { ...lead, ...response.data } : lead
-          )
-        );
+
+      // if update is successful, re-fetch all leads from server to reflect changes
+      if (response?.status === 200) {
+        await getLeads(); // refresh the full list from backend
       }
+
+      // const response = await axios.put(
+      //   `https://lead-flow-by-anvaya-backend.vercel.app/leads/${id}`,
+      //   updatedLead
+      // );
+      // if (response) {
+      //   setLeads((prevLeads) =>
+      //     prevLeads.map((lead) =>
+      //       lead._id === id ? { ...lead, ...response.data } : lead
+      //     )
+      //   );
+      // }
     } catch (error) {
       console.error("Error updating lead:", error);
     }

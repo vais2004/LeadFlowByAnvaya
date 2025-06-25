@@ -11,10 +11,12 @@ import AddForm from "./components/AddForm";
 
 function App() {
   const { leads } = useLeadContext();
-  const [filteredLeadsValue, setFilteredLeadsValue] = useState("New");
-  const filteredLeads = leads.filter(
-    (lead) => lead.status === filteredLeadsValue
-  );
+  const [filteredLeadsValue, setFilteredLeadsValue] = useState("All");
+  const filteredLeads =
+  filteredLeadsValue === "All"
+    ? leads
+    : leads.filter((lead) => lead.status === filteredLeadsValue);
+
 
   return (
     <>
@@ -61,14 +63,17 @@ function App() {
             <div className="mb-4">
               <label className="form-label">Quick Filter:</label>
               <select
-                className="form-control"
-                onChange={(e) => setFilteredLeadsValue(e.target.value)}>
-                <option value="New">New</option>
-                <option value="Contacted">Contacted</option>
-                <option value="Qualified">Qualified</option>
-                <option value="Proposal Sent">Proposal Sent</option>
-                <option value="Closed">Closed</option>
-              </select>
+  className="form-control"
+  onChange={(e) => setFilteredLeadsValue(e.target.value)}
+  value={filteredLeadsValue}
+>
+  <option value="All">All Leads</option>
+  <option value="New">New</option>
+  <option value="Contacted">Contacted</option>
+  <option value="Qualified">Qualified</option>
+  <option value="Proposal Sent">Proposal Sent</option>
+  <option value="Closed">Closed</option>
+</select>
             </div>
 
             <div className="mb-4">
