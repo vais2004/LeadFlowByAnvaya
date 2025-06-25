@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+
 import AddAgent from "../components/AddAgent";
 import useSalesAgentContext from "../context/SalesAgentContext";
 import { useState } from "react";

@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
 import useLeadContext from "../context/LeadContext";
 
 export default function LeadBySalesAgent() {
@@ -59,7 +58,7 @@ export default function LeadBySalesAgent() {
   return (
     <>
       <Header />
-      
+
       <main
         className="flex-grow-1 p-4 mt-5"
         style={{ backgroundColor: "lavender" }}>

@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import AddForm from "../components/AddForm";
-import Sidebar from "../components/Sidebar";
 
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
