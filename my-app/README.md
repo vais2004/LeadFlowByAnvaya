@@ -123,35 +123,37 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 
 ## 📸 Demo Images:
 ### DASHBOARD
-![Screenshot 2025-06-25 182211](https://github.com/user-attachments/assets/a5016022-5761-4322-92a5-5676b433d0bf)
+![Screenshot 2025-06-25 191509](https://github.com/user-attachments/assets/2bedd935-68c5-4015-bfc9-6f9ea7938ea1)
 
-![Screenshot 2025-06-25 182221](https://github.com/user-attachments/assets/42a9dc3a-c2a7-40e3-b872-8006a86e5328)
-
+![Screenshot 2025-06-25 191527](https://github.com/user-attachments/assets/3ee9326e-f650-411b-82c8-59e6df02c02e)
 
 ### LEAD MANAGEMENT
-![Screenshot 2025-06-25 182257](https://github.com/user-attachments/assets/9ad64cf3-c6e4-4b9e-967e-71008e6ead3a)
+![Screenshot 2025-06-25 191719](https://github.com/user-attachments/assets/3211d00f-3c62-485c-9a7a-a2f5e0061ba4)
 
-![Screenshot 2025-06-25 182305](https://github.com/user-attachments/assets/40dffa1a-7945-45d1-a42e-f83713dc62f9)
+![Screenshot 2025-06-25 191733](https://github.com/user-attachments/assets/7b411275-e554-4cc9-9be7-b0c7fb35a756)
 
 ### LEAD DETAILS
-![Screenshot 2025-06-25 182234](https://github.com/user-attachments/assets/4d6da46c-fb8f-43cf-9d4f-4cb387b618aa)
+![Screenshot 2025-06-25 191553](https://github.com/user-attachments/assets/8c28bca1-7a4e-4725-a5cf-9c671468df3b)
 
-![Screenshot 2025-06-25 182247](https://github.com/user-attachments/assets/733972bf-88a0-42ef-9159-6a442bc39e7c)
+![Screenshot 2025-06-25 191608](https://github.com/user-attachments/assets/68ac68de-2f1a-4ff4-b8d7-e9f5754f31cc)
+
+![Screenshot 2025-06-25 191639](https://github.com/user-attachments/assets/0eeab98a-b8e4-48c9-9a1c-7bb8eaeacd0d)
+
+![Screenshot 2025-06-25 191657](https://github.com/user-attachments/assets/c3ccf293-e78b-4b6e-ac2b-3bd0b0865d3f)
 
 ### SALES AGENT MANAGEMENT
-![Screenshot 2025-06-25 182314](https://github.com/user-attachments/assets/4c6be4ca-bb31-49f7-8322-7fff17720048)
+![Screenshot 2025-06-25 191748](https://github.com/user-attachments/assets/94b50d0b-b332-4a47-8328-74f18ffe93ee)
 
-![Screenshot 2025-06-25 182324](https://github.com/user-attachments/assets/82ac75b3-3715-49c1-a3e0-eb3ebcec181d)
+![Screenshot 2025-06-25 191803](https://github.com/user-attachments/assets/77189c04-3a8b-46c7-a07d-3e1060213050)
 
 ### LEAD BY SALES AGENT 
-![Screenshot 2025-06-25 183012](https://github.com/user-attachments/assets/d1bb92ea-01b8-4364-ba90-82881fd5a000)
+![Screenshot 2025-06-25 191818](https://github.com/user-attachments/assets/5893bef1-596a-4691-9614-bfbad2202fda)
 
 ### REPORT
-![Screenshot 2025-06-25 182338](https://github.com/user-attachments/assets/7d9d7b08-01f4-445b-8591-d827980e2da0)
+![Screenshot 2025-06-25 191834](https://github.com/user-attachments/assets/51588088-4e56-4765-a051-78d4cd4e7ea7)
 
-![Screenshot 2025-06-21 164613](https://github.com/user-attachments/assets/43c7f3f9-b88d-46b2-893a-79005c162754)
+![Screenshot 2025-06-25 191848](https://github.com/user-attachments/assets/2fe7eddd-d156-4eee-a6a9-b8b51b6007ed)
 
-![Screenshot 2025-06-21 164622](https://github.com/user-attachments/assets/8aed7400-98a7-4d9b-823f-ee2f8740931f)
+![Screenshot 2025-06-25 191905](https://github.com/user-attachments/assets/f1edbb9c-5bf8-4e1c-8d69-55f223b54570)
 
-![Screenshot 2025-06-21 164631](https://github.com/user-attachments/assets/98264d50-7572-4865-8c99-794b0a25b32a)
 
