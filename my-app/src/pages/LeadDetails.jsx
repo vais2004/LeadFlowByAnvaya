@@ -59,7 +59,7 @@ export default function LeadDetails() {
         <div
           className="flex-grow-1 bg-white p-4 rounded shadow"
           style={{ flex: "4 600px" }}>
-          <h3>Lead Details:-</h3>
+          <h3>Lead Details</h3>
           <hr />
           <div
             className="ps-4 pt-4 fs-6 pb-3 rounded"
@@ -133,7 +133,7 @@ export default function LeadDetails() {
                   </div>
                 ))
               ) : (
-                <div>No Comments yet...!!!</div>
+                <div>No Comments yet</div>
               )}
             </div>
 
