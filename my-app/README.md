@@ -123,9 +123,9 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 
 ## 📸 Demo Images:
 ### DASHBOARD
-![Screenshot 2025-06-25 191509](https://github.com/user-attachments/assets/2bedd935-68c5-4015-bfc9-6f9ea7938ea1)
+![Screenshot 2025-06-28 141012](https://github.com/user-attachments/assets/553a6762-9f06-4864-b84d-f10884516e00)
 
-![Screenshot 2025-06-25 191527](https://github.com/user-attachments/assets/3ee9326e-f650-411b-82c8-59e6df02c02e)
+![Screenshot 2025-06-28 141035](https://github.com/user-attachments/assets/60e53ec9-d12b-413f-8a93-dd5ebfd73bfd)
 
 ### LEAD MANAGEMENT
 ![Screenshot 2025-06-25 191719](https://github.com/user-attachments/assets/3211d00f-3c62-485c-9a7a-a2f5e0061ba4)
