@@ -9,8 +9,12 @@ import AddForm from "./components/AddForm";
 import useLeadContext from "./context/LeadContext";
 import { Link } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 function App() {
-  const { leads } = useLeadContext();
+  const { leads, deleteLead } = useLeadContext();
   const [filteredLeadsValue, setFilteredLeadsValue] = useState("All");
 
   const filteredLeads =
@@ -21,10 +25,20 @@ function App() {
   const countByStatus = (status) =>
     leads.filter((lead) => lead.status === status).length;
 
+  async function handleDelete(leadId) {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this lead?"
+    );
+    if (confirmDelete) {
+      await deleteLead(leadId);
+      toast.success("Lead deleted successfully!");
+    }
+  }
+
   return (
     <>
       <Header />
-
+      <ToastContainer position="top-right" autoClose={3000} />
       <main className="container mt-4 px-4">
         {/* dashboard header and filter */}
         <div className="d-flex justify-content-between align-items-center mb-4">
@@ -66,6 +80,63 @@ function App() {
           <h4 className="fw-semibold mb-3">Recent Leads</h4>
           <div className="row g-3">
             {filteredLeads && filteredLeads.length > 0 ? (
+              filteredLeads.map((lead, index) => (
+                <div className="col-md-4" key={index}>
+                  <div
+                    className="card shadow-sm h-100 border-0"
+                    style={{ backgroundColor: "lavender" }}>
+                    <div className="card-body">
+                      <h5 className="card-title fw-bold">{lead.name}</h5>
+                      <hr />
+                      <p className="mb-1">
+                        <strong>Source:</strong> {lead.source}
+                      </p>
+                      <p className="mb-1">
+                        <strong>Sales Agent:</strong>{" "}
+                        {lead.salesAgent?.name || "N/A"}
+                      </p>
+                      <p className="mb-1">
+                        <strong>Status:</strong>{" "}
+                        <span
+                          className="badge text-light col-3"
+                          style={{ backgroundColor: "#b074c9" }}>
+                          {lead.status}
+                        </span>
+                      </p>
+                      <p className="mb-1">
+                        <strong>Priority:</strong>{" "}
+                        <span
+                          className="badge text-light col-3"
+                          style={{ backgroundColor: "#e6437b" }}>
+                          {lead.priority || "N/A"}
+                        </span>
+                      </p>
+                      <p className="mb-3">
+                        <strong>Time to close:</strong>{" "}
+                        {lead.timeToClose || "N/A"} Days
+                      </p>
+
+                      <div className="d-flex  justify-content-between">
+                        <Link
+                          to={`/lead/details/${lead._id}`}
+                          className="col-5 btn btn-outline-primary btn-sm">
+                          View / Edit
+                        </Link>
+                        <button
+                          className="col-5 btn btn-outline-danger btn-sm"
+                          onClick={() => handleDelete(lead._id)}>
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="ps-3 text-muted">No lead found...!</div>
+            )}
+
+            {/* {filteredLeads && filteredLeads.length > 0 ? (
               filteredLeads.map((lead, index) => (
                 <div className="col-md-4" key={index}>
                   <Link
@@ -111,7 +182,7 @@ function App() {
               ))
             ) : (
               <div className="ps-3 text-muted">No lead found...!</div>
-            )}
+            )} */}
           </div>
         </div>
       </main>

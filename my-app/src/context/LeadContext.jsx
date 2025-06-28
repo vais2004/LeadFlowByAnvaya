@@ -68,9 +68,18 @@ export function LeadProvider({ children }) {
     }
   }
 
+  async function deleteLead(id) {
+    try {
+      await axios.delete(`https://lead-flow-by-anvaya-backend.vercel.app/leads/${id}`);
+      setLeads((prev) => prev.filter((lead) => lead._id !== id));
+    } catch (err) {
+      console.error("Error deleting lead:", err);
+    }
+  }
+
   return (
     <LeadContext.Provider
-      value={{ leads, addLead, updateLead, getLeads, loading }}>
+      value={{ leads, addLead, updateLead, getLeads, deleteLead, loading }}>
       {children}
     </LeadContext.Provider>
   );
