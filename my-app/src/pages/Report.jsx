@@ -38,15 +38,22 @@ export default function Reports() {
       });
   }, []);
 
+ 
   useEffect(() => {
-    axios
-      .get("https://lead-flow-by-anvaya-backend.vercel.app/report/last-week")
-      .then((res) => {
+    const fetchBarData = async () => {
+      try {
+        // console.log("Fetching leads closed in last 7 days...");
+        const res = await axios.get(
+          "https://lead-flow-by-anvaya-backend.vercel.app/report/last-week"
+        );
         setBarData(res.data);
-      })
-      .catch((error) => {
-        console.log("Error fetching weekly report", error);
-      });
+        // console.log("Last 7 days bar chart data set:", res.data);
+      } catch (error) {
+        console.error(" Error fetching bar chart data:", error);
+      }
+    };
+
+    fetchBarData();
   }, []);
 
   useEffect(() => {
