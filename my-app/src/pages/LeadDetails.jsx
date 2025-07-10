@@ -45,7 +45,7 @@ export default function LeadDetails() {
     };
 
     await addComment(comment, selectedLead._id);
-    localStorage.setItem("author", author); // Save name for reuse
+    localStorage.setItem("author",author); //save for reuse 
     setCommentText("");
     toast.success("Comment posted successfully!");
   }
