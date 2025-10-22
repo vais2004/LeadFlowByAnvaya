@@ -38,7 +38,6 @@ export default function Reports() {
       });
   }, []);
 
- 
   useEffect(() => {
     const fetchBarData = async () => {
       try {
