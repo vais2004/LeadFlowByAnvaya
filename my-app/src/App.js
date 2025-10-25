@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <Header />
-      <ToastContainer position="top-right" autoClose={3000} />
+       <ToastContainer position="top-right" autoClose={3000} />
       <main className="container mt-4 px-4">
         {/* dashboard header and filter */}
         <div className="d-flex justify-content-between align-items-center mb-4">
@@ -134,54 +134,6 @@ function App() {
             ) : (
               <div className="ps-3 text-muted">No lead found...!</div>
             )}
-
-            {/* {filteredLeads && filteredLeads.length > 0 ? (
-              filteredLeads.map((lead, index) => (
-                <div className="col-md-4" key={index}>
-                  <Link
-                    to={`/lead/details/${lead._id}`}
-                    className="text-decoration-none">
-                    <div
-                      className="card shadow-sm h-100 border-0"
-                      style={{ backgroundColor: "lavender" }}>
-                      <div className="card-body">
-                        <h5 className="card-title fw-bold">{lead.name}</h5>
-                        <hr />
-                        <p className="mb-1">
-                          <strong>Source:</strong> {lead.source}
-                        </p>
-                        <p className="mb-1">
-                          <strong>Sales Agent:</strong>{" "}
-                          {lead.salesAgent?.name || "N/A"}
-                        </p>
-                        <p className="mb-1">
-                          <strong>Status:</strong>{" "}
-                          <span
-                            className="badge text-light col-3"
-                            style={{ backgroundColor: "#b074c9" }}>
-                            {lead.status}
-                          </span>
-                        </p>
-                        <p className="mb-1">
-                          <strong>Priority:</strong>{" "}
-                          <span
-                            className="badge text-light col-3"
-                            style={{ backgroundColor: "#e6437b" }}>
-                            {lead.priority || "N/A"}
-                          </span>
-                        </p>
-                        <p className="mb-0">
-                          <strong>Time to close:</strong>{" "}
-                          {lead.timeToClose || "N/A"} Days
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))
-            ) : (
-              <div className="ps-3 text-muted">No lead found...!</div>
-            )} */}
           </div>
         </div>
       </main>

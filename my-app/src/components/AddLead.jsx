@@ -90,7 +90,7 @@ export default function AddLead({ data }) {
 
   return (
     <main className="container-fluid py-3 px-5">
-      <ToastContainer position="top-right" autoClose={3000} />
+      {/* <ToastContainer position="top-right" autoClose={3000} /> */}
       <h3>{data ? "Edit Lead" : "Add New Lead"}</h3>
       <hr />
 
