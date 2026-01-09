@@ -16,6 +16,7 @@ export function LeadProvider({ children }) {
   }, []);
 
   async function getLeads(filter = {}) {
+    setLoading(true);
     try {
       const queryParams = new URLSearchParams();
       if (filter.salesAgent)

@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { leads, deleteLead } = useLeadContext();
+  const { leads, deleteLead, loading } = useLeadContext();
   const [filteredLeadsValue, setFilteredLeadsValue] = useState("All");
 
   const filteredLeads =
@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <Header />
-       <ToastContainer position="top-right" autoClose={3000} />
+      <ToastContainer position="top-right" autoClose={3000} />
       <main className="container mt-4 px-4">
         {/* dashboard header and filter */}
         <div className="d-flex justify-content-between align-items-center mb-4">
@@ -74,11 +74,20 @@ function App() {
           <AddForm />
         </div>
 
-        {/* recent leads */}
         <div className="mb-4">
           <h4 className="fw-semibold mb-3">Recent Leads</h4>
+          {loading && (
+            <div className="alert alert-primary text-center mt-3">
+              Loading leads...
+            </div>
+          )}
+
+          {!loading && filteredLeads.length === 0 && (
+            <p className="text-muted mt-2">No leads found...</p>
+          )}
+
           <div className="row g-3">
-            {filteredLeads && filteredLeads.length > 0 ? (
+            {!loading &&
               filteredLeads.map((lead, index) => (
                 <div className="col-md-4" key={index}>
                   <div
@@ -130,10 +139,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              ))
-            ) : (
-              <div className="ps-3 text-muted">No lead found...!</div>
-            )}
+              ))}
           </div>
         </div>
       </main>
