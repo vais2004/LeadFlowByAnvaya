@@ -7,6 +7,8 @@ It's built using **HTML**, **CSS**, and **JavaScript**
 
 ##### Frontend code URL: (https://github.com/vais2004/LeadFlowByAnvaya)
 
+##### Walkthrough Video: (https://drive.google.com/file/d/1zGQaGzCeQeiJhwnemq7ru3buaWE-1vhT/view?usp=sharing)
+
 
 ## ✨ Pages:
 
