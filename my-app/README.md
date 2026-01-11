@@ -1,6 +1,8 @@
 # Anavaya App
 It's built using **HTML**, **CSS**, and **JavaScript**
 
+## 🔗 Project Resources
+
 - **Live Demo:** [Click here](https://lead-flow-by-anvaya.vercel.app/)
 - **Backend Code:** [Click here](https://github.com/vais2004/LeadFlowByAnvaya-backend)
 - **Frontend Code:** [Click here](https://github.com/vais2004/LeadFlowByAnvaya)
