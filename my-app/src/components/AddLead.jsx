@@ -1,7 +1,7 @@
 import axios from "axios";
 import useLeadContext from "../context/LeadContext";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AddLead({ data }) {
@@ -36,7 +36,7 @@ export default function AddLead({ data }) {
   useEffect(() => {
     const fetchAgents = async () => {
       const response = await axios.get(
-        "https://lead-flow-by-anvaya-backend.vercel.app/agents"
+        "https://lead-flow-by-anvaya-backend.vercel.app/agents",
       );
       setAgents(response.data);
     };

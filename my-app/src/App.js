@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -26,7 +26,7 @@ function App() {
 
   async function handleDelete(leadId) {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this lead?"
+      "Are you sure you want to delete this lead?",
     );
     if (confirmDelete) {
       await deleteLead(leadId);

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 import useSalesAgentContext from "../context/SalesAgentContext";
 import useLeadContext from "../context/LeadContext";
-import AddLead from "../components/AddLead";
 
 export default function LeadManagement() {
   const { agents } = useSalesAgentContext();

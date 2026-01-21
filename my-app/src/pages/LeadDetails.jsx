@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import useLeadContext from "../context/LeadContext";
 import useCommentContext from "../context/CommentContext";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function LeadDetails() {
@@ -17,7 +17,7 @@ export default function LeadDetails() {
   const [displayForm, setDisplayForm] = useState(false);
   const [readOnlyInput, setReadOnlyInput] = useState(true);
   const [author, setAuthor] = useState(
-    () => localStorage.getItem("author") || ""
+    () => localStorage.getItem("author") || "",
   );
   const [commentText, setCommentText] = useState("");
 
@@ -53,9 +53,7 @@ export default function LeadDetails() {
   return (
     <>
       <Header />
-
       <main className="container-fluid">
-        <ToastContainer position="top-right" autoClose={3000} />
         <div
           className="flex-grow-1 bg-white p-4 rounded shadow"
           style={{ flex: "4 600px" }}>

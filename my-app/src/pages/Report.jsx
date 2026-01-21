@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 
 import {
@@ -43,7 +43,7 @@ export default function Reports() {
       try {
         // console.log("Fetching leads closed in last 7 days...");
         const res = await axios.get(
-          "https://lead-flow-by-anvaya-backend.vercel.app/report/last-week"
+          "https://lead-flow-by-anvaya-backend.vercel.app/report/last-week",
         );
         setBarData(res.data);
         // console.log("Last 7 days bar chart data set:", res.data);
@@ -58,7 +58,7 @@ export default function Reports() {
   useEffect(() => {
     axios
       .get(
-        "https://lead-flow-by-anvaya-backend.vercel.app/report/status-distribution"
+        "https://lead-flow-by-anvaya-backend.vercel.app/report/status-distribution",
       )
       .then((res) => {
         setStatusBarData(res.data);

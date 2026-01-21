@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useSalesAgentContext from "../context/SalesAgentContext";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AddAgent() {
@@ -30,7 +30,6 @@ export default function AddAgent() {
 
   return (
     <>
-      <ToastContainer position="top-right" className="mt-5" autoClose={2000} />
       <form className="my-3" onSubmit={handleAgentSubmitBtn}>
         <div className="row g-3">
           <div>
